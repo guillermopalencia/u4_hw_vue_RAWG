@@ -13,7 +13,7 @@
 
       <h2>Search Results</h2>
       <section class="search-results container-grid">
-        <GameCard v-for="results in searchResults" :key="results.id" :name="results.name" :image="results.background_image" :rating="results.metacritic" @click="selectGame(results.id)"/>
+        <GameCard v-for="results in searchResults" :key="results.id" :name="results.name" :image="results.background_image" @click="selectGame(results.id)"/>
       </section>
     </div>
 

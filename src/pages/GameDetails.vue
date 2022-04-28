@@ -1,9 +1,12 @@
 <template>
+<button @click="backHome">
+  Home
+</button>
   <div class="game-content">
     <section class="image-container">
       <div>
         <img :src="image" />
-        <h1>{{ name }} {{ rating }}</h1>
+        <h1>{{ name }}</h1>
       </div>
     </section>
     <section class="details">
@@ -42,6 +45,9 @@ const API_KEY = process.env.VUE_APP_KEY
         this.name = res.data.name
         this.rating = res.data.ratings_count
         console.log(res.data)
+      },
+      backHome() {
+        this.$router.push(`/`)
       }
     }
   }
